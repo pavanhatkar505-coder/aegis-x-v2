@@ -1,0 +1,495 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #05080d;
+  color: #e7edf6;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  background:
+    radial-gradient(circle at 70% 0%, #0c1722 0, transparent 35%),
+    #05080d;
+}
+
+.sidebar {
+  width: 245px;
+  border-right: 1px solid #1b2734;
+  background: #080d13;
+  padding: 26px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.logoIcon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #00d4a6;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: #00e5b3;
+  box-shadow: 0 0 25px #00d4a620;
+}
+
+.logo strong {
+  display: block;
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #647384;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+}
+
+.navTitle {
+  color: #465666;
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  margin: 20px 12px 8px;
+}
+
+.nav {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #758596;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.nav:hover {
+  background: #101923;
+  color: white;
+}
+
+.nav.active {
+  color: #00e5b3;
+  background: #00d4a610;
+  border: 1px solid #00d4a620;
+}
+
+.systemBox {
+  margin-top: auto;
+  border: 1px solid #1c2935;
+  background: #0b1118;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.systemBox span {
+  display: block;
+  color: #566676;
+  margin: 7px 0 0 15px;
+}
+
+.greenDot {
+  width: 7px;
+  height: 7px;
+  background: #00e5a8;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  box-shadow: 0 0 10px #00e5a8;
+}
+
+.main {
+  flex: 1;
+  padding: 35px 42px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #00d9a6;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 5px 0 3px;
+}
+
+header p {
+  color: #667788;
+  margin: 0;
+  font-size: 13px;
+}
+
+.live {
+  border: 1px solid #1d2c36;
+  padding: 8px 13px;
+  border-radius: 30px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.live span {
+  width: 6px;
+  height: 6px;
+  background: #00e5a8;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  margin: 30px 0 18px;
+}
+
+.stat {
+  min-height: 94px;
+  border: 1px solid #192733;
+  background: #0a1017;
+  border-radius: 10px;
+  padding: 19px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.stat svg {
+  color: #00d9a6;
+}
+
+.stat span {
+  display: block;
+  color: #607080;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.stat strong {
+  font-size: 25px;
+}
+
+.stat.danger svg,
+.stat.danger strong {
+  color: #ff5567;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.55fr .8fr;
+  gap: 18px;
+}
+
+.panel {
+  background: #080e15;
+  border: 1px solid #192632;
+  border-radius: 12px;
+}
+
+.topology {
+  min-height: 420px;
+}
+
+.panelHeader {
+  border-bottom: 1px solid #17232e;
+  padding: 19px 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panelHeader span {
+  color: #536474;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.panelHeader h2 {
+  margin: 3px 0 0;
+  font-size: 17px;
+}
+
+.monitoring {
+  color: #00d9a6;
+  font-size: 9px;
+}
+
+.network {
+  padding: 40px;
+}
+
+.attacker {
+  width: 165px;
+  margin: auto;
+  border: 1px solid #ff4c5f55;
+  background: #ff344410;
+  border-radius: 9px;
+  text-align: center;
+  padding: 13px;
+  color: #ff6676;
+}
+
+.attacker strong,
+.attacker span {
+  display: block;
+}
+
+.attacker strong {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.attacker span {
+  font-size: 8px;
+  margin-top: 3px;
+}
+
+.attackLine {
+  height: 62px;
+  width: 1px;
+  margin: auto;
+  background: #ff4055;
+  position: relative;
+}
+
+.attackLine span {
+  position: absolute;
+  width: 90px;
+  left: 9px;
+  top: 24px;
+  color: #ff5365;
+  font-size: 8px;
+}
+
+.servers {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.serverNode {
+  flex: 1;
+  border: 1px solid #1e3340;
+  border-radius: 10px;
+  background: #0b141c;
+  padding: 22px 10px;
+  text-align: center;
+}
+
+.serverNode svg {
+  color: #00d9a6;
+}
+
+.serverNode strong,
+.serverNode span {
+  display: block;
+}
+
+.serverNode strong {
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.serverNode span {
+  color: #00d9a6;
+  font-size: 8px;
+  margin-top: 4px;
+}
+
+.serverNode.compromised {
+  border-color: #ff435755;
+  box-shadow: 0 0 30px #ff304415;
+}
+
+.serverNode.compromised svg,
+.serverNode.compromised span {
+  color: #ff5265;
+}
+
+.incident {
+  padding: 24px;
+  position: relative;
+}
+
+.criticalLabel {
+  color: #ff5365;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.incident h2 {
+  margin: 8px 0 3px;
+  font-size: 20px;
+}
+
+.incidentId {
+  color: #586a7b;
+  font-size: 11px;
+}
+
+.riskCircle {
+  width: 105px;
+  height: 105px;
+  margin: 25px auto;
+  border: 5px solid #ff465a;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  box-shadow: 0 0 30px #ff304420;
+}
+
+.riskCircle strong {
+  color: #ff5a6c;
+  font-size: 29px;
+}
+
+.riskCircle span {
+  font-size: 8px;
+  color: #667686;
+}
+
+.details {
+  border-top: 1px solid #182530;
+  border-bottom: 1px solid #182530;
+  padding: 13px 0;
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.details span {
+  color: #617181;
+  font-size: 9px;
+}
+
+.details strong {
+  font-size: 10px;
+}
+
+.red {
+  color: #ff5667;
+}
+
+.investigate {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #00d9a6;
+  background: #00d9a612;
+  color: #00e5b3;
+  border-radius: 7px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .8px;
+}
+
+.investigate:hover {
+  background: #00d9a622;
+}
+
+.decisionStrip {
+  margin-top: 18px;
+  border: 1px solid #20303d;
+  border-left: 3px solid #00d9a6;
+  border-radius: 9px;
+  background: #091118;
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.decisionIcon {
+  color: #00d9a6;
+}
+
+.decisionStrip span {
+  display: block;
+  color: #00d9a6;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.decisionStrip strong {
+  font-size: 12px;
+}
+
+.actions {
+  margin-left: auto;
+  color: #68798a;
+  font-size: 9px;
+}
+
+.decisionStrip button {
+  border: 0;
+  border-radius: 6px;
+  background: #00d9a6;
+  color: #04100d;
+  padding: 11px 16px;
+  font-size: 9px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .sidebar {
+    display: none;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
